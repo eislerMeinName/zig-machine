@@ -41,10 +41,10 @@ pub const StateMachine = struct {
             State.s3 => {
                 self.last_state = State.s3;
                 const number: u8 = input - 48;
-                if (input == 0) {
+                if (input == '0') {
                     self.curr_state = State.s7;
                 }
-                if (input == 1) {
+                if (input == '1') {
                     self.curr_state = State.s8;
                 } else {
                     self.curr_state = State.s4;
